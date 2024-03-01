@@ -1,0 +1,76 @@
+.maindiv {
+  margin-top: 0;
+}
+
+.allcards {
+  flex-wrap: wrap;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card1 {
+  border: 1px solid lightgrey;
+  display: flex;
+  padding: 2px;
+  height: 200px;
+  width: 300px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.hdesc {
+  padding: 15px;
+  text-decoration: underline;
+}
+
+.card2 {
+  border: 1px solid lightgrey;
+  display: flex;
+  padding: 2px;
+  height: 200px;
+  width: 300px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.card3 {
+  border: 1px solid lightgrey;
+  display: flex;
+  padding: 2px;
+  height: 200px;
+  width: 300px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.bckground {
+  height: 100%;
+  width: 100%;
+}
+.desc {
+  padding: 15px;
+  font-size: 2rem;
+}
+.productheading {
+  margin-top: 10px;
+}
+.tabpanel {
+  margin-top: 15px;
+}
+.tabdesc {
+  margin-top: 15px;
+}
+
+.productcard {
+  max-height: 500px;
+  max-width: 200px;
+  margin-left: 20px;
+}
+
+.productimg {
+  padding: 5px;
+}
+
+.homeproductss {
+  display: flex;
+  flex-wrap: wrap;
+}
