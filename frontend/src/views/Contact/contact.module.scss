@@ -1,0 +1,14 @@
+.image_wrapper {
+  background-image: url("/assets/about/img.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  width: auto;
+  .h2 {
+    color: aquamarine;
+  }
+}
+
+.box {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
