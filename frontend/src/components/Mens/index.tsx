@@ -3,6 +3,7 @@ import scss from "./mens.module.scss";
 import { Button, Card, Group, Image, Tabs, Text } from "@mantine/core";
 import { IoShirtSharp, IoWatch } from "react-icons/io5";
 import { RiTShirtFill } from "react-icons/ri";
+import Backbutton from "@/utils/Backbutton";
 
 const tshirt = [
   {
@@ -115,10 +116,12 @@ const watches = [
 const Mens = () => {
   return (
     <div className={scss.maindiv}>
-      {" "}
       <div className="container">
+        <div className="my-4">
+          <Backbutton />
+        </div>
         <div className={scss.productheading}>
-          <h2>Mens Products</h2>
+          <h2>Accessories Products</h2>
         </div>
         <div className={scss.tabpanel}>
           <Tabs defaultValue="shirt">

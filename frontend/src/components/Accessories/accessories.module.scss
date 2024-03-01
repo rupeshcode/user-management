@@ -52,7 +52,11 @@
 }
 .productheading {
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .tabpanel {
   margin-top: 15px;
 }

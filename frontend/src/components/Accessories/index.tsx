@@ -5,6 +5,7 @@ import { IoShirtSharp, IoWatch } from "react-icons/io5";
 import { RiTShirtFill } from "react-icons/ri";
 import { GiBelt, GiConverseShoe } from "react-icons/gi";
 import { PiBaseballCapBold } from "react-icons/pi";
+import Backbutton from "@/utils/Backbutton";
 
 const shoes = [
   {
@@ -154,8 +155,10 @@ const watches = [
 const Accessories = () => {
   return (
     <div className={scss.maindiv}>
-      {" "}
       <div className="container">
+        <div className="my-4">
+          <Backbutton />
+        </div>
         <div className={scss.productheading}>
           <h2>Accessories Products</h2>
         </div>
