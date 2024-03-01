@@ -1,74 +1,113 @@
 import React from "react";
-import scss from "./mens.module.scss";
+import scss from "./accessories.module.scss";
 import { Button, Card, Group, Image, Tabs, Text } from "@mantine/core";
 import { IoShirtSharp, IoWatch } from "react-icons/io5";
 import { RiTShirtFill } from "react-icons/ri";
+import { GiBelt, GiConverseShoe } from "react-icons/gi";
+import { PiBaseballCapBold } from "react-icons/pi";
 import Backbutton from "@/utils/Backbutton";
 
-const tshirt = [
+const shoes = [
   {
-    image: "/assets/tshirt/1.jpeg",
-    alt: "black tshirt",
+    image: "/assets/shoes/1.jpeg",
+    alt: "black shoes",
     desc: "Shirt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/tshirt/1.jpeg",
-    alt: "black tshirt",
+    image: "/assets/shoes/1.jpeg",
+    alt: "black shoes",
     desc: "Shirt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/tshirt/1.jpeg",
-    alt: "black tshirt",
+    image: "/assets/shoes/1.jpeg",
+    alt: "black shoes",
     desc: "Shirt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/tshirt/1.jpeg",
-    alt: "black tshirt",
+    image: "/assets/shoes/1.jpeg",
+    alt: "black shoes",
     desc: "Shirt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/tshirt/1.jpeg",
-    alt: "black tshirt",
+    image: "/assets/shoes/1.jpeg",
+    alt: "black shoes",
+    desc: "Shirt For Men",
+    rs: "499.00",
+    button: "Quick View",
+  },
+];
+const cap = [
+  {
+    image: "/assets/cap/1.jpeg",
+    alt: "black cap",
+    desc: "Shirt For Men",
+    rs: "499.00",
+    button: "Quick View",
+  },
+  {
+    image: "/assets/cap/1.jpeg",
+    alt: "black cap",
+    desc: "Shirt For Men",
+    rs: "499.00",
+    button: "Quick View",
+  },
+  {
+    image: "/assets/cap/1.jpeg",
+    alt: "black cap",
+    desc: "Shirt For Men",
+    rs: "499.00",
+    button: "Quick View",
+  },
+  {
+    image: "/assets/cap/1.jpeg",
+    alt: "black cap",
+    desc: "Shirt For Men",
+    rs: "499.00",
+    button: "Quick View",
+  },
+  {
+    image: "/assets/cap/1.jpeg",
+    alt: "black cap",
     desc: "Shirt For Men",
     rs: "499.00",
     button: "Quick View",
   },
 ];
 
-const shirt = [
+const belt = [
   {
-    image: "/assets/shirt/1.jpeg",
-    alt: "black tshirt",
-    desc: "Shirt For Men",
+    image: "/assets/belt/1.jpeg",
+    alt: "black tbelt",
+    desc: "belt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/shirt/1.jpeg",
-    alt: "black tshirt",
-    desc: "Shirt For Men",
+    image: "/assets/belt/1.jpeg",
+    alt: "black tbelt",
+    desc: "belt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/shirt/1.jpeg",
-    alt: "black tshirt",
-    desc: "Shirt For Men",
+    image: "/assets/belt/1.jpeg",
+    alt: "black tbelt",
+    desc: "belt For Men",
     rs: "499.00",
     button: "Quick View",
   },
   {
-    image: "/assets/shirt/1.jpeg",
-    alt: "black tshirt",
-    desc: "Shirt For Men",
+    image: "/assets/belt/1.jpeg",
+    alt: "black tbelt",
+    desc: "belt For Men",
     rs: "499.00",
     button: "Quick View",
   },
@@ -113,7 +152,7 @@ const watches = [
   },
 ];
 
-const Mens = () => {
+const Accessories = () => {
   return (
     <div className={scss.maindiv}>
       <div className="container">
@@ -124,22 +163,25 @@ const Mens = () => {
           <h2>Accessories Products</h2>
         </div>
         <div className={scss.tabpanel}>
-          <Tabs defaultValue="shirt">
+          <Tabs defaultValue="shoes">
             <Tabs.List>
-              <Tabs.Tab ml={4} value="shirt" leftSection={<IoShirtSharp />}>
-                Shirt
+              <Tabs.Tab ml={4} value="shoes" leftSection={<GiConverseShoe />}>
+                Shoes
               </Tabs.Tab>
-              <Tabs.Tab ml={4} value="tshirt" leftSection={<RiTShirtFill />}>
-                Tshirt
+              <Tabs.Tab ml={4} value="cap" leftSection={<PiBaseballCapBold />}>
+                Cap
               </Tabs.Tab>
-              <Tabs.Tab ml={4} value="accessories" leftSection={<IoWatch />}>
-                Accessories
+              <Tabs.Tab ml={4} value="watch" leftSection={<IoWatch />}>
+                Watch
+              </Tabs.Tab>
+              <Tabs.Tab ml={4} value="belt" leftSection={<GiBelt />}>
+                Belt
               </Tabs.Tab>
             </Tabs.List>
 
-            <Tabs.Panel className={scss.tabdesc} value="shirt">
+            <Tabs.Panel className={scss.tabdesc} value="shoes">
               <div className={scss.homeproductss}>
-                {shirt.map((item, index) => (
+                {shoes.map((item, index) => (
                   <Card
                     key={index}
                     className={scss.productcard}
@@ -176,9 +218,9 @@ const Mens = () => {
               </div>
             </Tabs.Panel>
 
-            <Tabs.Panel className={scss.tabdesc} value="tshirt">
+            <Tabs.Panel className={scss.tabdesc} value="cap">
               <div className={scss.homeproductss}>
-                {tshirt.map((item, index) => (
+                {cap.map((item, index) => (
                   <Card
                     key={index}
                     className={scss.productcard}
@@ -215,9 +257,48 @@ const Mens = () => {
               </div>
             </Tabs.Panel>
 
-            <Tabs.Panel className={scss.tabdesc} value="accessories">
+            <Tabs.Panel className={scss.tabdesc} value="watch">
               <div className={scss.homeproductss}>
                 {watches.map((item, index) => (
+                  <Card
+                    key={index}
+                    className={scss.productcard}
+                    shadow="sm"
+                    padding="lg"
+                    radius="md"
+                    withBorder
+                  >
+                    <Card.Section>
+                      <Image
+                        className={scss.productimg}
+                        src={item.image}
+                        h={250}
+                        alt="Norway"
+                      />
+                    </Card.Section>
+
+                    <Group justify="space-between" mt="md" mb="xs">
+                      <Text fw={500}>{item.desc} </Text>
+                    </Group>
+                    <Text>Rs. {item.rs}/-</Text>
+
+                    <Button
+                      // onClick={handlequickview}
+                      color="blue"
+                      fullWidth
+                      mt="md"
+                      radius="md"
+                    >
+                      {item.button}
+                    </Button>
+                  </Card>
+                ))}
+              </div>
+            </Tabs.Panel>
+
+            <Tabs.Panel className={scss.tabdesc} value="belt">
+              <div className={scss.homeproductss}>
+                {belt.map((item, index) => (
                   <Card
                     key={index}
                     className={scss.productcard}
@@ -260,4 +341,4 @@ const Mens = () => {
   );
 };
 
-export default Mens;
+export default Accessories;
