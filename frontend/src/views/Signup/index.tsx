@@ -20,6 +20,7 @@ import { FaPhoneAlt, FaRegUser } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { TbFingerprint } from "react-icons/tb";
+import Image from "next/image";
 
 // import { toast } from "react-toastify";
 
@@ -112,10 +113,12 @@ const Register = () => {
       <div className="container">
         <div className="row">
           <div className="col-6">
-            <img
+            <Image
               className={scss.imageee}
               src="/assets/images/login.jpg"
               alt="signup"
+              width={100}
+              height={100}
             />
           </div>
           <div className="col-6 pt-2 mb-5 ">
