@@ -233,6 +233,9 @@ const Menswear = () => {
           >
             <div className="col-12">
               <BackgroundImage
+                onClick={() => {
+                  router.push("/womensection");
+                }}
                 className={scss.bckground}
                 src="/assets/images/women.jpg"
               >

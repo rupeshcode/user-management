@@ -4,13 +4,12 @@ import { Button, Card, Container, TextInput, Textarea } from "@mantine/core";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { clsx } from "@/utils/string";
 const Contact = () => {
   return (
     <>
       <div className={scss.image_wrapper}>
-        <h2 className="d-flex align-items-center justify-content-center">
-          Contact
-        </h2>
+        <h2 className={scss.heading}>Contact</h2>
       </div>
       <Container>
         <div className="row">
@@ -40,22 +39,22 @@ const Contact = () => {
             </Card>
           </div>
           <div className="col-lg-6">
-            <Card shadow="lg">
+            <Card shadow="lg" className={scss.address_wrapper}>
               <div className="d-flex align-items-center ">
                 <FaLocationDot className="mx-2" />
-                <p>Address</p>
+                <span>Address</span>
               </div>
-              <p>prahalad Nagar, New Delhi- 509001</p>
-              <div className="d-flex">
+              <span>prahalad Nagar, New Delhi- 509001</span>
+              <div className="d-flex align-items-center">
                 <FaPhoneVolume className="mx-2" />
-                <p>Lets Talk</p>
+                <span>Lets Talk</span>
               </div>
-              <p>+91|9876543210</p>
-              <div className="d-flex">
+              <span>+91|9876543210</span>
+              <div className="d-flex align-items-center">
                 <MdEmail className="mx-2" />
-                <p>Sale Support</p>
+                <span>Sale Support</span>
               </div>
-              <p>example@gmail.com</p>
+              <span>example@gmail.com</span>
             </Card>
           </div>
         </div>

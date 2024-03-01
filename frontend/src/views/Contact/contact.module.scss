@@ -3,12 +3,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 250px;
-  width: auto;
-  .h2 {
-    color: aquamarine;
-  }
+  width: 100%;
 }
 
 .box {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.address_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.heading {
+  display: flex;
+  padding: 6rem;
+  justify-content: center;
+  color: lightcyan;
 }
