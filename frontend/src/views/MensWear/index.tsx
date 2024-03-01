@@ -207,6 +207,9 @@ const Menswear = () => {
           >
             <div className={clsx(scss.cards, "col-12")}>
               <BackgroundImage
+                onClick={() => {
+                  router.push("/mensproducts");
+                }}
                 className={scss.bckground}
                 src="/assets/images/mens.jpg"
               >

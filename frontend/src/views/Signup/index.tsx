@@ -113,12 +113,10 @@ const Register = () => {
       <div className="container">
         <div className="row">
           <div className="col-6">
-            <Image
+            <img
               className={scss.imageee}
               src="/assets/images/login.jpg"
               alt="signup"
-              width={100}
-              height={100}
             />
           </div>
           <div className="col-6 pt-2 mb-5 ">
