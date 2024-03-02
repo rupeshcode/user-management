@@ -4,32 +4,44 @@ import Image from "next/image";
 import "@mantine/carousel/styles.css";
 import scss from "./checkoutdetails.module.scss";
 
-import React from "react";
+import React, { useState } from "react";
+import { clsx } from "@/utils/string";
 
 const Checkout = () => {
+  const [selectedImage, setSelectedImage] = useState(
+    "/assets/about/about-01.webp"
+  );
+  const handleImageChange = (newImage: any) => {
+    setSelectedImage(newImage);
+  };
   return (
     <>
       <Container>
-        <div className="row">
+        <div className={clsx(scss.maindiv, "row")}>
           <div className="col-md-2">
-            <div className="d-flex flex-direction-column">
+            <div>
               <Image
+                className="mb-2"
                 src="/assets/about/about-01.webp"
                 alt="checkoutimg"
                 height={100}
                 width={100}
+                onClick={() => handleImageChange("/assets/about/about-01.webp")}
               />
               <Image
+                className="mb-2"
                 src="/assets/about/about-02.webp"
                 alt="checkoutimg"
                 height={100}
                 width={100}
+                onClick={() => handleImageChange("/assets/about/about-02.webp")}
               />
               <Image
                 src="/assets/about/img.webp"
                 alt="checkoutimg"
                 height={100}
                 width={100}
+                onClick={() => handleImageChange("/assets/about/img.webp")}
               />
             </div>
           </div>
@@ -37,16 +49,23 @@ const Checkout = () => {
             <Carousel
               loop
               withIndicators
-              height={500}
+              // height={500}
               dragFree
               slideGap="md"
               align="start"
+              initialSlide={
+                selectedImage === "/assets/about/about-02.webp"
+                  ? 1
+                  : selectedImage === "/assets/about/img.webp"
+                  ? 2
+                  : 0
+              }
             >
               <Carousel.Slide>
                 <Image
                   src="/assets/about/about-01.webp"
                   alt="checkoutimg"
-                  height={1000}
+                  height={100}
                   width={1000}
                 />
               </Carousel.Slide>
@@ -54,7 +73,7 @@ const Checkout = () => {
                 <Image
                   src="/assets/about/about-02.webp"
                   alt="checkoutimg"
-                  height={1000}
+                  height={100}
                   width={1000}
                 />
               </Carousel.Slide>
@@ -62,11 +81,10 @@ const Checkout = () => {
                 <Image
                   src="/assets/about/img.webp"
                   alt="checkoutimg"
-                  height={1000}
+                  height={100}
                   width={1000}
                 />
               </Carousel.Slide>
-              {/* ...other slides */}
             </Carousel>
           </div>
           <div className="col-md-5">
