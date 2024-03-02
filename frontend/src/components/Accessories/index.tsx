@@ -6,6 +6,7 @@ import { RiTShirtFill } from "react-icons/ri";
 import { GiBelt, GiConverseShoe } from "react-icons/gi";
 import { PiBaseballCapBold } from "react-icons/pi";
 import Backbutton from "@/utils/Backbutton";
+import { useRouter } from "next/router";
 
 const shoes = [
   {
@@ -153,6 +154,7 @@ const watches = [
 ];
 
 const Accessories = () => {
+  const router = useRouter();
   return (
     <div className={scss.maindiv}>
       <div className="container">
@@ -205,7 +207,9 @@ const Accessories = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"
@@ -244,7 +248,9 @@ const Accessories = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"
@@ -283,7 +289,9 @@ const Accessories = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"
@@ -322,7 +330,9 @@ const Accessories = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"

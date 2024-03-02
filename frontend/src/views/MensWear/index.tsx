@@ -172,9 +172,6 @@ const Menswear = () => {
   const autoplay = useRef(Autoplay({ delay: 3000 }));
   const router = useRouter();
 
-  const handlequickview = () => {
-    router.push("/productdetail");
-  };
   return (
     <>
       <div className={scss.maindiv}>
@@ -325,7 +322,9 @@ const Menswear = () => {
                       <Text>Rs. {item.rs}/-</Text>
 
                       <Button
-                        onClick={handlequickview}
+                        onClick={() => {
+                          router.push("/checkoutdetails");
+                        }}
                         color="blue"
                         fullWidth
                         mt="md"
@@ -363,7 +362,9 @@ const Menswear = () => {
                       <Text>Rs. {item.rs}/-</Text>
 
                       <Button
-                        onClick={handlequickview}
+                        onClick={() => {
+                          router.push("/checkoutdetails");
+                        }}
                         color="blue"
                         fullWidth
                         mt="md"
@@ -402,7 +403,9 @@ const Menswear = () => {
                       <Text>Rs. {item.rs}/-</Text>
 
                       <Button
-                        onClick={handlequickview}
+                        onClick={() => {
+                          router.push("/checkoutdetails");
+                        }}
                         color="blue"
                         fullWidth
                         mt="md"
@@ -441,7 +444,9 @@ const Menswear = () => {
                       <Text>Rs. {item.rs}/-</Text>
 
                       <Button
-                        onClick={handlequickview}
+                        onClick={() => {
+                          router.push("/checkoutdetails");
+                        }}
                         color="blue"
                         fullWidth
                         mt="md"

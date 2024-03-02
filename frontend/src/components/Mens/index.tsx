@@ -4,6 +4,7 @@ import { Button, Card, Group, Image, Tabs, Text } from "@mantine/core";
 import { IoShirtSharp, IoWatch } from "react-icons/io5";
 import { RiTShirtFill } from "react-icons/ri";
 import Backbutton from "@/utils/Backbutton";
+import { useRouter } from "next/router";
 
 const tshirt = [
   {
@@ -114,6 +115,7 @@ const watches = [
 ];
 
 const Mens = () => {
+  const router = useRouter();
   return (
     <div className={scss.maindiv}>
       <div className="container">
@@ -163,7 +165,9 @@ const Mens = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"
@@ -202,7 +206,9 @@ const Mens = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"
@@ -241,7 +247,9 @@ const Mens = () => {
                     <Text>Rs. {item.rs}/-</Text>
 
                     <Button
-                      // onClick={handlequickview}
+                      onClick={() => {
+                        router.push("/checkoutdetails");
+                      }}
                       color="blue"
                       fullWidth
                       mt="md"

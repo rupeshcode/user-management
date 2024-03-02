@@ -1,8 +1,8 @@
 import Checkout from "@/views/Checkoutdetails";
 import React from "react";
 
-const CheckoutPage = () => {
+const CheckOutDetails = () => {
   return <Checkout />;
 };
 
-export default CheckoutPage;
+export default CheckOutDetails;
