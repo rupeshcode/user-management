@@ -46,7 +46,7 @@ function Layout({ children }: any) {
     (isAuthenticated ||
       (!isAuthenticated && PUBLIC_ROUTES.has(router.asPath))) && (
       <div className="flex flex-column w-100 h-100 ">
-        {/* {!NO_HEADER_ROUTES.includes(router.pathname) && <Header />} */}
+        {!NO_HEADER_ROUTES.includes(router.pathname) && <Header />}
         <div>{children}</div>
         {/* {!NO_HEADER_ROUTES.includes(router.pathname) && <Footer />} */}
       </div>

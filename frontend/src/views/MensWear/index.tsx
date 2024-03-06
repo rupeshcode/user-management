@@ -18,6 +18,8 @@ import { IoShirtSharp, IoWatch } from "react-icons/io5";
 import { RiTShirtFill } from "react-icons/ri";
 import { Badge } from "react-bootstrap";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "@/Redux/Slice/AddtoCartSlice";
 
 const slidebaroffer = [
   {
@@ -59,39 +61,46 @@ const homeproducts = [
 ];
 const tshirt = [
   {
+    id: 1,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
     rs: "499.00",
-    button: "Quick View",
   },
   {
+    id: 2,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
     rs: "499.00",
-    button: "Quick View",
   },
   {
+    id: 3,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
     rs: "499.00",
-    button: "Quick View",
   },
   {
+    id: 4,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
-    rs: "499.00",
-    button: "Quick View",
+    rs: "699.00",
   },
   {
+    id: 5,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
-    rs: "499.00",
-    button: "Quick View",
+    rs: "49.00",
+  },
+  {
+    id: 6,
+    image: "/assets/tshirt/1.jpeg",
+    alt: "black tshirt",
+    desc: "Shirt For Men",
+    rs: "599.00",
   },
 ];
 
@@ -171,7 +180,12 @@ const Menswear = () => {
   const [isCard3Hovered, setIsCard3Hovered] = useState(false);
   const autoplay = useRef(Autoplay({ delay: 3000 }));
   const router = useRouter();
+  // const cartItems = useSelector((state) => state.Cart.cart);
+  const dispatch = useDispatch();
 
+  const handleAddToCart = (item: any) => {
+    dispatch(addItem(item));
+  };
   return (
     <>
       <div className={scss.maindiv}>
@@ -396,23 +410,23 @@ const Menswear = () => {
                           alt="Norway"
                         />
                       </Card.Section>
-
                       <Group justify="space-between" mt="md" mb="xs">
                         <Text fw={500}>{item.desc} </Text>
                       </Group>
                       <Text>Rs. {item.rs}/-</Text>
-
                       <Button
-                        onClick={() => {
-                          router.push("/checkoutdetails");
-                        }}
+                        onClick={() => handleAddToCart(item)}
                         color="blue"
                         fullWidth
                         mt="md"
                         radius="md"
                       >
-                        {item.button}
+                        Add to Cart
                       </Button>
+                      {/*
+                      <div className="d-flex justify-content-center">
+                        <Button>Add to Cart</Button>
+                      </div> */}
                     </Card>
                   ))}
                 </div>

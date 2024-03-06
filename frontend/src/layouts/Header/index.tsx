@@ -3,11 +3,14 @@ import scss from "./header.module.scss";
 
 import { FaUserCircle } from "react-icons/fa";
 import { ImCart } from "react-icons/im";
-import { Button, Text } from "@mantine/core";
+import { Badge, Button, Text } from "@mantine/core";
 import { useRouter } from "next/router";
 import { clsx } from "@/utils/string";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const cartItems = useSelector((state) => state.Cart.cart);
+
   const router = useRouter();
   const handleClick = () => {
     router.push("/login");
@@ -64,7 +67,20 @@ const Header = () => {
 
       <div className={scss.searchContainer}>
         <div className={scss.icons}>
-          <ImCart className={scss.icon} />
+          <div className="d-flex flex-column ">
+            <div className="px-4 ">
+              <Badge size="xs" circle color="red">
+                <div style={{}}></div> {cartItems?.length}
+              </Badge>
+            </div>
+            <ImCart
+              className={scss.icon}
+              onClick={() => {
+                router.push("/cart");
+              }}
+            />
+          </div>
+
           <FaUserCircle className={scss.icon} />
         </div>
       </div>

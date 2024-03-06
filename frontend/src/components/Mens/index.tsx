@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 const tshirt = [
   {
+    id: 1,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
@@ -15,6 +16,7 @@ const tshirt = [
     button: "Quick View",
   },
   {
+    id: 2,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
@@ -22,6 +24,7 @@ const tshirt = [
     button: "Quick View",
   },
   {
+    id: 3,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
@@ -29,6 +32,7 @@ const tshirt = [
     button: "Quick View",
   },
   {
+    id: 4,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",
@@ -36,6 +40,7 @@ const tshirt = [
     button: "Quick View",
   },
   {
+    id: 5,
     image: "/assets/tshirt/1.jpeg",
     alt: "black tshirt",
     desc: "Shirt For Men",

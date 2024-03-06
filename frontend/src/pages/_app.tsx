@@ -11,6 +11,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 // import ToastifyAlert from "@/components/Toastify";
 import { ModalsProvider } from "@mantine/modals";
+import { Provider } from "react-redux";
+import { store } from "@/stores/add-to-cart-store";
 
 const Layout = dynamic(() => import("./../layouts/Layout"), {
   ssr: false,
@@ -23,12 +25,15 @@ const theme = createTheme({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <MantineProvider theme={theme}>
-      <ModalsProvider>
-        <Layout>
-          {/* <ToastifyAlert /> */}
-          <Component {...pageProps} />
-        </Layout>
-      </ModalsProvider>
+      <Provider store={store}>
+        <ModalsProvider>
+          <Layout>
+            {/* <ToastifyAlert /> */}
+            <Component {...pageProps} />
+          </Layout>
+        </ModalsProvider>
+      </Provider>
+      ,
     </MantineProvider>
   );
 }
