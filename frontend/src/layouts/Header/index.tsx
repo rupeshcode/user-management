@@ -9,7 +9,7 @@ import { clsx } from "@/utils/string";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-  const cartItems = useSelector((state) => state.Cart.cart);
+  const cartItems = useSelector((state: any) => state.Cart.cart);
 
   const router = useRouter();
   const handleClick = () => {
@@ -57,6 +57,13 @@ const Header = () => {
           className={clsx(scss.header_content, "mx-2")}
         >
           Contact
+        </Text>
+        <Text
+          onClick={() => {
+            router.push("/wishlist");
+          }}
+        >
+          WishList
         </Text>
       </div>
 

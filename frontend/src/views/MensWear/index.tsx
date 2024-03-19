@@ -20,6 +20,9 @@ import { Badge } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "@/Redux/Slice/AddtoCartSlice";
+import { FaHeart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { addtowishList } from "@/Redux/Slice/AddtoWishList";
 
 const slidebaroffer = [
   {
@@ -186,6 +189,12 @@ const Menswear = () => {
   const handleAddToCart = (item: any) => {
     dispatch(addItem(item));
   };
+
+  const handleAddToWishList = (item: any) => {
+    if (dispatch(addtowishList(item))) {
+      alert("Item added to wish list");
+    }
+  };
   return (
     <>
       <div className={scss.maindiv}>
@@ -322,12 +331,17 @@ const Menswear = () => {
                       withBorder
                     >
                       <Card.Section>
-                        <Image
-                          className={scss.productimg}
-                          src={item.image}
-                          h={250}
-                          alt="Norway"
-                        />
+                        <div className="Image_div">
+                          <Image
+                            className={scss.productimg}
+                            src={item.image}
+                            h={250}
+                            alt="Norway"
+                          />
+                          <div className={scss.icon_div}>
+                            <CiHeart />
+                          </div>
+                        </div>
                       </Card.Section>
 
                       <Group justify="space-between" mt="md" mb="xs">
@@ -362,12 +376,17 @@ const Menswear = () => {
                       withBorder
                     >
                       <Card.Section>
-                        <Image
-                          className={scss.productimg}
-                          src={item.image}
-                          h={250}
-                          alt="Norway"
-                        />
+                        <div className="Image_div">
+                          <Image
+                            className={scss.productimg}
+                            src={item.image}
+                            h={250}
+                            alt="Norway"
+                          />
+                          <div className={scss.icon_div}>
+                            <CiHeart />
+                          </div>
+                        </div>
                       </Card.Section>
 
                       <Group justify="space-between" mt="md" mb="xs">
@@ -403,12 +422,19 @@ const Menswear = () => {
                       withBorder
                     >
                       <Card.Section>
-                        <Image
-                          className={scss.productimg}
-                          src={item.image}
-                          h={250}
-                          alt="Norway"
-                        />
+                        <div className="Image_div">
+                          <Image
+                            className={scss.productimg}
+                            src={item.image}
+                            h={250}
+                            alt="Norway"
+                          />
+                          <div className={scss.icon_div}>
+                            <CiHeart
+                              onClick={() => handleAddToWishList(item)}
+                            />
+                          </div>
+                        </div>
                       </Card.Section>
                       <Group justify="space-between" mt="md" mb="xs">
                         <Text fw={500}>{item.desc} </Text>
@@ -444,12 +470,17 @@ const Menswear = () => {
                       withBorder
                     >
                       <Card.Section>
-                        <Image
-                          className={scss.productimg}
-                          src={item.image}
-                          h={250}
-                          alt="Norway"
-                        />
+                        <div className="Image_div">
+                          <Image
+                            className={scss.productimg}
+                            src={item.image}
+                            h={250}
+                            alt="Norway"
+                          />
+                          <div className={scss.icon_div}>
+                            <CiHeart />
+                          </div>
+                        </div>
                       </Card.Section>
 
                       <Group justify="space-between" mt="md" mb="xs">
